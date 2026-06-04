@@ -1,0 +1,297 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#111;
+    padding:40px;
+}
+
+/* Main Container */
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0px 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Top Banner */
+
+.hero{
+    background:#050816;
+    color:white;
+    padding:40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.hero-left h4{
+    letter-spacing:2px;
+    color:#aaa;
+    margin-bottom:10px;
+}
+
+.hero-left h1{
+    font-size:48px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.live-tag{
+    display:inline-block;
+    background:#0f9d58;
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:14px;
+}
+
+.eta-box{
+    background:#111827;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    min-width:180px;
+}
+
+.eta-box h1{
+    font-size:60px;
+}
+
+.eta-box p{
+    color:#aaa;
+    letter-spacing:2px;
+}
+
+/* Grid */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    border-top:1px solid #eee;
+}
+
+.grid-item{
+    padding:30px;
+    border-bottom:1px solid #eee;
+    border-right:1px solid #eee;
+}
+
+.grid-item h4{
+    color:#888;
+    margin-bottom:10px;
+    letter-spacing:1px;
+}
+
+.grid-item h2{
+    font-size:32px;
+}
+
+.blue{
+    color:#2563eb;
+}
+
+.green{
+    color:#16a34a;
+}
+
+/* Timeline */
+
+.timeline-section{
+    padding:40px;
+}
+
+.timeline-section h3{
+    margin-bottom:30px;
+    color:#777;
+    letter-spacing:2px;
+}
+
+.timeline{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.step{
+    text-align:center;
+    flex:1;
+    position:relative;
+}
+
+.circle{
+    width:45px;
+    height:45px;
+    background:#2563eb;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    margin-bottom:10px;
+}
+
+.line{
+    position:absolute;
+    top:22px;
+    left:50%;
+    width:100%;
+    height:4px;
+    background:#2563eb;
+    z-index:-1;
+}
+
+.step:last-child .line{
+    display:none;
+}
+
+.inactive .circle{
+    background:#ddd;
+    color:#777;
+}
+
+.inactive .line{
+    background:#ddd;
+}
+
+/* Assistant */
+
+.assistant{
+    padding:40px;
+    border-top:1px solid #eee;
+}
+
+.assistant h3{
+    color:#777;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+.bot-message{
+    background:#f5f5f5;
+    padding:20px;
+    border-radius:14px;
+    margin-bottom:20px;
+    display:inline-block;
+}
+
+.options{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+
+.options button{
+    padding:12px 18px;
+    border:none;
+    border-radius:10px;
+    background:#f0f0f0;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.user-input-section{
+    display:flex;
+    gap:10px;
+}
+
+.user-input-section input{
+    flex:1;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    background:#111827;
+    color:white;
+    font-size:16px;
+}
+
+.user-input-section button{
+    padding:16px 22px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+}
+
+/* Alerts */
+
+.alert-section{
+    padding:40px;
+    border-top:1px solid #eee;
+}
+
+.alert-section h3{
+    color:#777;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+.alert-box{
+    background:#fff4db;
+    border:1px solid #facc15;
+    padding:20px;
+    border-radius:14px;
+    color:#b45309;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .hero{
+        flex-direction:column;
+        gap:30px;
+        text-align:center;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .timeline{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .line{
+        display:none;
+    }
+
+}
+/* Chat Messages */
+
+.chat-messages{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.ai-message{
+    background:#f3f4f6;
+    padding:15px 18px;
+    border-radius:14px;
+    max-width:75%;
+    align-self:flex-start;
+    line-height:1.5;
+}
+
+.user-message{
+    background:#2563eb;
+    color:white;
+    padding:15px 18px;
+    border-radius:14px;
+    max-width:75%;
+    align-self:flex-end;
+    line-height:1.5;
+}
